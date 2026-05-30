@@ -135,7 +135,6 @@ export function MissionBuilderSection() {
     window.open(`mailto:Nienergyadvice@nihe.gov.uk?subject=${subject}&body=${body}`, "_self");
     setSubmitted(true);
     setConfetti(true);
-    setTimeout(() => setConfetti(false), 4000);
   }
 
   function getMissionText() {
