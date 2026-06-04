@@ -36,21 +36,7 @@ export function HeroSection() {
             </p>
           </div>
 
-          {/* 3. Winning-heroes image + WE'RE BACK!! */}
-          <div className="mt-10 animate-in fade-in duration-1000">
-            <img
-              src={`${import.meta.env.BASE_URL}eco-heroes-export/images/winning-heroes.png`}
-              alt="The Eco-Heroes Squad"
-              className="w-full max-w-xl mx-auto rounded-2xl border-4 border-foreground comic-shadow object-contain"
-            />
-            <div className="text-center mt-6">
-              <p className="text-6xl md:text-8xl font-black font-display text-accent drop-shadow-[4px_4px_0_hsl(var(--foreground))] animate-bounce">
-                WE'RE BACK!!
-              </p>
-            </div>
-          </div>
-
-          {/* 4. Age tiles */}
+          {/* 3. Age tiles */}
           <div className="mt-8 animate-in fade-in duration-700">
             <p className="text-2xl md:text-3xl font-black uppercase tracking-wide text-foreground mb-4">
               🎯 What Age Group Are You?
@@ -77,6 +63,20 @@ export function HeroSection() {
               ))}
             </div>
             <p className="mt-3 text-sm font-bold text-foreground/50">Tap your age group to jump straight to the Mission Builder ↓</p>
+          </div>
+
+          {/* 4. Winning-heroes image + WE'RE BACK!! */}
+          <div className="mt-10 animate-in fade-in duration-1000">
+            <img
+              src={`${import.meta.env.BASE_URL}eco-heroes-export/images/winning-heroes.png`}
+              alt="The Eco-Heroes Squad"
+              className="w-full max-w-xl mx-auto rounded-2xl border-4 border-foreground comic-shadow object-contain"
+            />
+            <div className="text-center mt-6">
+              <p className="text-6xl md:text-8xl font-black font-display text-accent drop-shadow-[4px_4px_0_hsl(var(--foreground))] animate-bounce">
+                WE'RE BACK!!
+              </p>
+            </div>
           </div>
 
           {/* 5. Poem + Eco-Heroes blurb */}
