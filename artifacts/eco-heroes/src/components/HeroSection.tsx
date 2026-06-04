@@ -52,6 +52,7 @@ export function HeroSection() {
                   key={id}
                   onClick={() => {
                     sessionStorage.setItem("preselectedAge", id);
+                    window.dispatchEvent(new CustomEvent("ageTileSelected", { detail: id }));
                     document.getElementById("mission")?.scrollIntoView({ behavior: "smooth" });
                   }}
                   className={`${color} border-4 rounded-2xl p-4 comic-shadow text-center transition-transform hover:scale-105 active:scale-95 cursor-pointer`}

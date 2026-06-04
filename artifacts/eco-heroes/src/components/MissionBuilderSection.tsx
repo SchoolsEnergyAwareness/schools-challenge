@@ -77,14 +77,24 @@ export function MissionBuilderSection() {
 
   // Pick up age pre-selected from the hero section tiles
   useEffect(() => {
-    const pre = sessionStorage.getItem("preselectedAge");
-    if (pre && ACTIONS_BY_AGE[pre]) {
-      sessionStorage.removeItem("preselectedAge");
-      setAgeBand(pre);
-      setAction(ACTIONS_BY_AGE[pre][0]);
-      setStep("eco-school");
-      setActivated(true);
+    function activate(age: string) {
+      if (ACTIONS_BY_AGE[age]) {
+        sessionStorage.removeItem("preselectedAge");
+        setAgeBand(age);
+        setAction(ACTIONS_BY_AGE[age][0]);
+        setStep("eco-school");
+        setActivated(true);
+      }
     }
+    // Handle tile click at any time (custom event)
+    function onTileClick(e: Event) {
+      activate((e as CustomEvent).detail);
+    }
+    window.addEventListener("ageTileSelected", onTileClick);
+    // Also handle page-load case (e.g. navigated from another page)
+    const pre = sessionStorage.getItem("preselectedAge");
+    if (pre) activate(pre);
+    return () => window.removeEventListener("ageTileSelected", onTileClick);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const [isEcoSchool, setIsEcoSchool] = useState<boolean | null>(null);
