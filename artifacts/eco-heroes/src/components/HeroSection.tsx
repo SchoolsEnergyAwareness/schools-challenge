@@ -39,32 +39,6 @@ export function HeroSection() {
             </p>
           </div>
 
-          {/* ── Poem box ── */}
-          <div className="relative mt-8 mb-10 animate-in zoom-in-95 duration-1000 delay-300">
-            <div className="absolute -inset-2 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl opacity-50 blur-lg"></div>
-            <div className="relative bg-white border-4 border-foreground rounded-3xl p-5 md:p-8 comic-shadow transform rotate-1">
-              <h2 className="text-2xl font-display font-black text-accent mb-4 uppercase tracking-wider">
-                The Eco-Hero Mission
-              </h2>
-              <div className="space-y-3 text-lg md:text-xl font-bold text-foreground leading-relaxed">
-                <p>We switch off the lights when we leave the room, ✋</p>
-                <p>We turn down the heat to stop the planet's doom, 🧥</p>
-                <p>We unplug our chargers at the end of the day, ⚡</p>
-                <p>We choose green energy every single way, ☀️</p>
-                <p className="text-2xl md:text-3xl text-primary mt-6 uppercase">
-                  Together we heroes keep waste away! 💪🌍
-                </p>
-              </div>
-              <div className="absolute -top-8 -right-8 w-24 h-24 rounded-full border-4 border-foreground comic-shadow bg-white overflow-hidden animate-wiggle">
-                <img
-                  src={`${import.meta.env.BASE_URL}eco-heroes-export/images/niseeap-logo.jpg`}
-                  alt="NI Schools Energy Efficiency Awareness Programme"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-
           {/* ── Mission Statement Competition text ── */}
           <div className="mt-8 animate-in fade-in duration-700">
             <h2 className="text-3xl md:text-5xl font-black font-display text-primary uppercase tracking-wide drop-shadow-[2px_2px_0_hsl(var(--foreground))]">
@@ -115,11 +89,32 @@ export function HeroSection() {
               <p className="text-6xl md:text-8xl font-black font-display text-accent drop-shadow-[4px_4px_0_hsl(var(--foreground))] animate-bounce">
                 WE'RE BACK!!
               </p>
-              <ul className="mt-4 text-base md:text-lg font-bold text-foreground/70 max-w-xl mx-auto leading-relaxed text-left space-y-2 list-none pl-0">
-                <li>✏️ Write your school's <span className="whitespace-nowrap">Eco-Hero</span> mission statement</li>
-                <li>🌿 Earn points towards your <span className="text-primary font-black whitespace-nowrap">Eco-Schools Green Flag</span></li>
-                <li>💻 Be in with a chance to win one of <span className="text-secondary font-black whitespace-nowrap">5 eco-refurbished laptops</span> for your <span className="whitespace-nowrap">Eco-Committee</span></li>
-              </ul>
+            </div>
+          </div>
+
+          {/* ── Poem box — kept with Eco-Heroes ── */}
+          <div className="relative mt-10 animate-in zoom-in-95 duration-1000">
+            <div className="absolute -inset-2 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl opacity-50 blur-lg"></div>
+            <div className="relative bg-white border-4 border-foreground rounded-3xl p-5 md:p-8 comic-shadow transform rotate-1">
+              <h2 className="text-2xl font-display font-black text-accent mb-4 uppercase tracking-wider">
+                The Eco-Hero Mission
+              </h2>
+              <div className="space-y-3 text-lg md:text-xl font-bold text-foreground leading-relaxed">
+                <p>We switch off the lights when we leave the room, ✋</p>
+                <p>We turn down the heat to stop the planet's doom, 🧥</p>
+                <p>We unplug our chargers at the end of the day, ⚡</p>
+                <p>We choose green energy every single way, ☀️</p>
+                <p className="text-2xl md:text-3xl text-primary mt-6 uppercase">
+                  Together we heroes keep waste away! 💪🌍
+                </p>
+              </div>
+              <div className="absolute -top-8 -right-8 w-24 h-24 rounded-full border-4 border-foreground comic-shadow bg-white overflow-hidden animate-wiggle">
+                <img
+                  src={`${import.meta.env.BASE_URL}eco-heroes-export/images/niseeap-logo.jpg`}
+                  alt="NI Schools Energy Efficiency Awareness Programme"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
 
