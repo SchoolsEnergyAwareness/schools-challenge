@@ -13,40 +13,28 @@ export function HeroSection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
 
-          {/* ── Original top section ── */}
-          <div className="mb-6 animate-in slide-in-from-bottom-8 duration-700">
-            <div className="flex justify-center gap-1 mb-4">
-              <span className="text-5xl drop-shadow-lg" role="img" aria-label="5 Eco-Refurbished Laptops to be won">💻</span>
-              <span className="text-5xl drop-shadow-lg">💻</span>
-              <span className="text-5xl drop-shadow-lg">💻</span>
-              <span className="text-5xl drop-shadow-lg">💻</span>
-              <span className="text-5xl drop-shadow-lg">💻</span>
-            </div>
-            <p className="text-xl md:text-3xl font-black uppercase tracking-wide mb-3 drop-shadow-[2px_2px_0_rgba(0,0,0,0.15)]">
-              <span className="text-secondary">🏆 5x Eco-Refurbished Laptops <span className="whitespace-nowrap">to Be Won</span></span>
-              <span className="text-foreground/30 mx-2">·</span>
-              <span className="text-primary whitespace-nowrap">ECO-FLAGS</span>
-              <span className="text-foreground/30 mx-2">·</span>
-              <span className="text-accent whitespace-nowrap">Free Entry</span>
+          {/* ── Dark "Your Mission" card ── */}
+          <div className="mb-5 bg-foreground text-background rounded-2xl px-4 md:px-6 py-4 block w-full max-w-sm mx-auto border-4 border-foreground comic-shadow animate-in slide-in-from-bottom-8 duration-700">
+            <p className="text-xs md:text-base font-bold tracking-wide uppercase text-background/70 mb-1 text-balance">
+              🎖️ Your Mission, If You Choose To Accept It...
             </p>
-            <div className="mb-5 bg-foreground text-background rounded-2xl px-4 md:px-6 py-4 block w-full max-w-sm mx-auto border-4 border-foreground comic-shadow">
-              <p className="text-xs md:text-base font-bold tracking-wide uppercase text-background/70 mb-1 text-balance">
-                🎖️ Your Mission, If You Choose To Accept It...
-              </p>
-              <p className="text-xl md:text-3xl font-black uppercase tracking-wide text-secondary whitespace-nowrap">
-                Our Eco-Hero Competition
-              </p>
-              <p className="text-xs md:text-sm font-bold text-red-400 mt-2 animate-pulse tracking-wide uppercase whitespace-nowrap">
-                ⚠️ This message will self-destruct<br /><span className="whitespace-nowrap">by Thurs 16 June ⚠️</span>
-              </p>
-            </div>
+            <p className="text-xl md:text-3xl font-black uppercase tracking-wide text-secondary whitespace-nowrap">
+              Our Eco-Hero Competition
+            </p>
+            <p className="text-xs md:text-sm font-bold text-red-400 mt-2 animate-pulse tracking-wide uppercase whitespace-nowrap">
+              ⚠️ This message will self-destruct<br /><span className="whitespace-nowrap">by Thurs 16 June ⚠️</span>
+            </p>
+          </div>
+
+          {/* ── H1 + subtitles ── */}
+          <div className="mb-6 animate-in slide-in-from-bottom-8 duration-700 delay-100">
             <h1 className="text-5xl md:text-7xl font-black text-primary drop-shadow-[0_4px_0_hsl(var(--foreground))]">
               Our School<br /><span className="text-secondary">Eco-Heroes</span>
             </h1>
             <p className="mt-3 text-lg font-bold text-foreground/60">
               Led by <span className="text-primary font-black">Max</span> — and the Eco-Heroes Committee
             </p>
-            <p className="mt-4 text-xl md:text-2xl font-bold text-foreground/80 italic text-center">
+            <p className="mt-4 text-xl md:text-2xl font-bold text-foreground/80 italic">
               Bring Down Energy!
             </p>
           </div>
@@ -77,41 +65,17 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* ── Flashing image: winning heroes + WE'RE BACK ── */}
-          <div className="mt-8 animate-in fade-in duration-1000 delay-500">
-            <img
-              src={`${import.meta.env.BASE_URL}eco-heroes-export/images/winning-heroes.png`}
-              alt="The Eco-Heroes Squad"
-              className="w-full max-w-xl mx-auto rounded-2xl border-4 border-foreground comic-shadow object-contain"
-            />
-            <div className="text-center mt-6">
-              <p className="text-6xl md:text-8xl font-black font-display text-accent drop-shadow-[4px_4px_0_hsl(var(--foreground))] animate-bounce">
-                WE'RE BACK!!
-              </p>
-              <ul className="mt-4 text-base md:text-lg font-bold text-foreground/70 max-w-xl mx-auto leading-relaxed text-left space-y-2 list-none pl-0">
-                <li>✏️ Write your school's <span className="whitespace-nowrap">Eco-Hero</span> mission statement</li>
-                <li>🌿 Earn points towards your <span className="text-primary font-black whitespace-nowrap">Eco-Schools Green Flag</span></li>
-                <li>💻 Be in with a chance to win one of <span className="text-secondary font-black whitespace-nowrap">5 eco-refurbished laptops</span> for your <span className="whitespace-nowrap">Eco-Committee</span> — or for your school if you're just starting your eco-flag journey</li>
-              </ul>
-            </div>
+          {/* ── Mission Statement Competition text ── */}
+          <div className="mt-8 animate-in fade-in duration-700">
+            <h2 className="text-3xl md:text-5xl font-black font-display text-primary uppercase tracking-wide drop-shadow-[2px_2px_0_hsl(var(--foreground))]">
+              Our Mission Statement<br />Competition
+            </h2>
+            <p className="mt-3 text-lg md:text-xl font-bold text-foreground/70 italic">
+              Tell us about your school — we'll point you in the right direction!
+            </p>
           </div>
 
-          {/* ── OUR MISSION STATEMENT COMPETITION text ── */}
-          <div className="mt-10 animate-in fade-in duration-700">
-            <div className="bg-primary border-4 border-foreground rounded-2xl p-8 comic-shadow transform -rotate-1">
-              <p className="text-xs md:text-sm font-bold uppercase tracking-widest text-white/70 mb-2">
-                ✍️ Enter Below
-              </p>
-              <h2 className="text-3xl md:text-4xl font-black font-display text-white uppercase tracking-wide drop-shadow-[2px_2px_0_rgba(0,0,0,0.3)] mb-3">
-                Our Mission Statement<br />Competition
-              </h2>
-              <p className="text-lg md:text-xl font-bold text-white/90 italic">
-                Tell us about your school — we'll point you in the right direction!
-              </p>
-            </div>
-          </div>
-
-          {/* ── Age group tiles for the builder ── */}
+          {/* ── Age group tiles ── */}
           <div className="mt-8 mb-4 animate-in fade-in duration-700">
             <p className="text-2xl md:text-3xl font-black uppercase tracking-wide text-foreground mb-4">
               🎯 What age group are you?
@@ -138,6 +102,25 @@ export function HeroSection() {
               ))}
             </div>
             <p className="mt-3 text-sm font-bold text-foreground/50">Tap your age group to jump straight to the Mission Builder ↓</p>
+          </div>
+
+          {/* ── Flashing image: winning heroes + WE'RE BACK ── */}
+          <div className="mt-10 animate-in fade-in duration-1000 delay-500">
+            <img
+              src={`${import.meta.env.BASE_URL}eco-heroes-export/images/winning-heroes.png`}
+              alt="The Eco-Heroes Squad"
+              className="w-full max-w-xl mx-auto rounded-2xl border-4 border-foreground comic-shadow object-contain"
+            />
+            <div className="text-center mt-6">
+              <p className="text-6xl md:text-8xl font-black font-display text-accent drop-shadow-[4px_4px_0_hsl(var(--foreground))] animate-bounce">
+                WE'RE BACK!!
+              </p>
+              <ul className="mt-4 text-base md:text-lg font-bold text-foreground/70 max-w-xl mx-auto leading-relaxed text-left space-y-2 list-none pl-0">
+                <li>✏️ Write your school's <span className="whitespace-nowrap">Eco-Hero</span> mission statement</li>
+                <li>🌿 Earn points towards your <span className="text-primary font-black whitespace-nowrap">Eco-Schools Green Flag</span></li>
+                <li>💻 Be in with a chance to win one of <span className="text-secondary font-black whitespace-nowrap">5 eco-refurbished laptops</span> for your <span className="whitespace-nowrap">Eco-Committee</span></li>
+              </ul>
+            </div>
           </div>
 
         </div>
