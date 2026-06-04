@@ -1,4 +1,3 @@
-import { Link } from "wouter";
 import { NiheBadge } from "./NiheBadge";
 
 export function HeroSection() {
@@ -15,7 +14,23 @@ export function HeroSection() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6 animate-in slide-in-from-bottom-8 duration-700">
 
-            {/* Dark "Your Mission" briefing card — first */}
+            {/* Laptops + prize text */}
+            <div className="flex justify-center gap-1 mb-4">
+              <span className="text-5xl drop-shadow-lg" role="img" aria-label="5 Eco-Refurbished Laptops to be won">💻</span>
+              <span className="text-5xl drop-shadow-lg">💻</span>
+              <span className="text-5xl drop-shadow-lg">💻</span>
+              <span className="text-5xl drop-shadow-lg">💻</span>
+              <span className="text-5xl drop-shadow-lg">💻</span>
+            </div>
+            <p className="text-xl md:text-3xl font-black uppercase tracking-wide mb-3 drop-shadow-[2px_2px_0_rgba(0,0,0,0.15)]">
+              <span className="text-secondary">🏆 5x Eco-Refurbished Laptops <span className="whitespace-nowrap">to Be Won</span></span>
+              <span className="text-foreground/30 mx-2">·</span>
+              <span className="text-primary whitespace-nowrap">ECO-FLAGS</span>
+              <span className="text-foreground/30 mx-2">·</span>
+              <span className="text-accent whitespace-nowrap">Free Entry</span>
+            </p>
+
+            {/* Dark "Your Mission" briefing card */}
             <div className="mb-5 bg-foreground text-background rounded-2xl px-4 md:px-6 py-4 block w-full max-w-sm mx-auto border-4 border-foreground comic-shadow">
               <p className="text-xs md:text-base font-bold tracking-wide uppercase text-background/70 mb-1 text-balance">
                 🎖️ Your Mission, If You Choose To Accept It...
@@ -28,35 +43,6 @@ export function HeroSection() {
               </p>
             </div>
 
-            {/* Age group tiles — second */}
-            <div className="mb-6">
-              <p className="text-2xl md:text-3xl font-black uppercase tracking-wide text-foreground mb-4">
-                🎯 What age group are you?
-              </p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl mx-auto">
-                {[
-                  { id: "5-7",           emoji: "⭐", label: "Ages 5–7",      sub: "Foundation & KS1", color: "bg-yellow-100 border-yellow-400 hover:bg-yellow-200" },
-                  { id: "8-11",          emoji: "🚀", label: "Ages 8–11",     sub: "Key Stage 2",      color: "bg-green-100 border-green-500 hover:bg-green-200" },
-                  { id: "12-14",         emoji: "🔬", label: "Ages 12–14",    sub: "Key Stage 3",      color: "bg-blue-100 border-blue-500 hover:bg-blue-200" },
-                  { id: "all-abilities", emoji: "♿", label: "All Abilities", sub: "All learners",     color: "bg-purple-100 border-purple-400 hover:bg-purple-200" },
-                ].map(({ id, emoji, label, sub, color }) => (
-                  <button
-                    key={id}
-                    onClick={() => {
-                      sessionStorage.setItem("preselectedAge", id);
-                      document.getElementById("mission")?.scrollIntoView({ behavior: "smooth" });
-                    }}
-                    className={`${color} border-4 rounded-2xl p-4 comic-shadow text-center transition-transform hover:scale-105 active:scale-95 cursor-pointer`}
-                  >
-                    <div className="text-4xl mb-1">{emoji}</div>
-                    <div className="font-black text-foreground text-base uppercase leading-tight">{label}</div>
-                    <div className="text-xs font-bold text-foreground/60 mt-1">{sub}</div>
-                  </button>
-                ))}
-              </div>
-              <p className="mt-3 text-sm font-bold text-foreground/50">Tap your age group to jump straight to the Mission Builder ↓</p>
-            </div>
-
             {/* H1 + subtitles */}
             <h1 className="text-5xl md:text-7xl font-black text-primary drop-shadow-[0_4px_0_hsl(var(--foreground))]">
               Our School<br /><span className="text-secondary">Eco-Heroes</span>
@@ -67,27 +53,6 @@ export function HeroSection() {
             <p className="mt-4 text-xl md:text-2xl font-bold text-foreground/80 italic text-center">
               Bring Down Energy!
             </p>
-            <p className="mt-3 text-lg md:text-xl font-black text-foreground uppercase tracking-wide">
-              Design a Mission Statement for <span className="text-primary">Your School</span> <span className="text-foreground/50 normal-case">(below)</span>
-            </p>
-
-            {/* Laptops + prize text — moved below title */}
-            <div className="mt-5">
-              <div className="flex justify-center gap-1 mb-4">
-                <span className="text-5xl drop-shadow-lg" role="img" aria-label="5 Eco-Refurbished Laptops to be won">💻</span>
-                <span className="text-5xl drop-shadow-lg">💻</span>
-                <span className="text-5xl drop-shadow-lg">💻</span>
-                <span className="text-5xl drop-shadow-lg">💻</span>
-                <span className="text-5xl drop-shadow-lg">💻</span>
-              </div>
-              <p className="text-xl md:text-3xl font-black uppercase tracking-wide mb-3 drop-shadow-[2px_2px_0_rgba(0,0,0,0.15)]">
-                <span className="text-secondary">🏆 5x Eco-Refurbished Laptops <span className="whitespace-nowrap">to Be Won</span></span>
-                <span className="text-foreground/30 mx-2">·</span>
-                <span className="text-primary whitespace-nowrap">ECO-FLAGS</span>
-                <span className="text-foreground/30 mx-2">·</span>
-                <span className="text-accent whitespace-nowrap">Free Entry</span>
-              </p>
-            </div>
           </div>
 
           {/* Poem box */}
@@ -116,11 +81,11 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Winning heroes image */}
+          {/* Winning heroes image + WE'RE BACK */}
           <div className="mt-8 animate-in fade-in duration-1000 delay-500">
-            <img 
+            <img
               src={`${import.meta.env.BASE_URL}eco-heroes-export/images/winning-heroes.png`}
-              alt="The Eco-Heroes Squad" 
+              alt="The Eco-Heroes Squad"
               className="w-full max-w-xl mx-auto rounded-2xl border-4 border-foreground comic-shadow object-contain"
             />
             <div className="text-center mt-6">
@@ -134,6 +99,30 @@ export function HeroSection() {
               </ul>
             </div>
           </div>
+
+          {/* OUR MISSION STATEMENT COMPETITION call-to-action */}
+          <div className="mt-10 animate-in fade-in duration-700 delay-500">
+            <div className="bg-primary border-4 border-foreground rounded-2xl p-8 comic-shadow transform -rotate-1">
+              <p className="text-xs md:text-sm font-bold uppercase tracking-widest text-white/70 mb-2">
+                ✍️ Enter Below
+              </p>
+              <h2 className="text-3xl md:text-4xl font-black font-display text-white uppercase tracking-wide drop-shadow-[2px_2px_0_rgba(0,0,0,0.3)] mb-3">
+                Our Mission Statement<br />Competition
+              </h2>
+              <p className="text-lg md:text-xl font-bold text-white/90 italic">
+                Tell us about your school — we'll point you in the right direction!
+              </p>
+              <div className="mt-5">
+                <button
+                  onClick={() => document.getElementById("mission")?.scrollIntoView({ behavior: "smooth" })}
+                  className="bg-white text-primary border-4 border-white/50 font-black text-lg px-8 py-3 rounded-xl comic-shadow hover:scale-105 transition-transform uppercase"
+                >
+                  🚀 Start Your Mission
+                </button>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
