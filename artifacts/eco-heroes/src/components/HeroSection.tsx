@@ -65,21 +65,22 @@ export function HeroSection() {
             <p className="mt-3 text-sm font-bold text-foreground/50">Tap your age group to jump straight to the Mission Builder ↓</p>
           </div>
 
-          {/* 4. Our School Eco-Heroes blurb */}
-          <div className="mt-10 animate-in slide-in-from-bottom-8 duration-700">
-            <h1 className="text-5xl md:text-7xl font-black text-primary drop-shadow-[0_4px_0_hsl(var(--foreground))]">
-              Our School<br /><span className="text-secondary">Eco-Heroes</span>
-            </h1>
-            <p className="mt-3 text-lg font-bold text-foreground/60">
-              Led by <span className="text-primary font-black">Max</span> — and the Eco-Heroes Committee
-            </p>
-            <p className="mt-4 text-xl md:text-2xl font-bold text-foreground/80 italic">
-              Bring Down Energy!
-            </p>
+          {/* 4. Winning heroes image + WE'RE BACK */}
+          <div className="mt-10 animate-in fade-in duration-1000">
+            <img
+              src={`${import.meta.env.BASE_URL}eco-heroes-export/images/winning-heroes.png`}
+              alt="The Eco-Heroes Squad"
+              className="w-full max-w-xl mx-auto rounded-2xl border-4 border-foreground comic-shadow object-contain"
+            />
+            <div className="text-center mt-6">
+              <p className="text-6xl md:text-8xl font-black font-display text-accent drop-shadow-[4px_4px_0_hsl(var(--foreground))] animate-bounce">
+                WE'RE BACK!!
+              </p>
+            </div>
           </div>
 
           {/* 5. Poem box */}
-          <div className="relative mt-8 animate-in zoom-in-95 duration-1000">
+          <div className="relative mt-10 animate-in zoom-in-95 duration-1000">
             <div className="absolute -inset-2 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl opacity-50 blur-lg"></div>
             <div className="relative bg-white border-4 border-foreground rounded-3xl p-5 md:p-8 comic-shadow transform rotate-1">
               <h2 className="text-2xl font-display font-black text-accent mb-4 uppercase tracking-wider">
@@ -101,20 +102,6 @@ export function HeroSection() {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </div>
-          </div>
-
-          {/* 6. Winning heroes image + WE'RE BACK */}
-          <div className="mt-10 animate-in fade-in duration-1000">
-            <img
-              src={`${import.meta.env.BASE_URL}eco-heroes-export/images/winning-heroes.png`}
-              alt="The Eco-Heroes Squad"
-              className="w-full max-w-xl mx-auto rounded-2xl border-4 border-foreground comic-shadow object-contain"
-            />
-            <div className="text-center mt-6">
-              <p className="text-6xl md:text-8xl font-black font-display text-accent drop-shadow-[4px_4px_0_hsl(var(--foreground))] animate-bounce">
-                WE'RE BACK!!
-              </p>
             </div>
           </div>
 
