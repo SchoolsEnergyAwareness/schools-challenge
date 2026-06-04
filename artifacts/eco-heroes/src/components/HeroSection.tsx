@@ -14,20 +14,31 @@ export function HeroSection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6 animate-in slide-in-from-bottom-8 duration-700">
-            <div className="flex justify-center gap-1 mb-4">
-              <span className="text-5xl drop-shadow-lg" role="img" aria-label="5 Eco-Refurbished Laptops to be won">💻</span>
-              <span className="text-5xl drop-shadow-lg">💻</span>
-              <span className="text-5xl drop-shadow-lg">💻</span>
-              <span className="text-5xl drop-shadow-lg">💻</span>
-              <span className="text-5xl drop-shadow-lg">💻</span>
+            <div className="relative mb-8 animate-in zoom-in-95 duration-1000">
+              <div className="absolute -inset-2 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl opacity-50 blur-lg"></div>
+              <div className="relative bg-white border-4 border-foreground rounded-3xl p-5 md:p-8 comic-shadow transform rotate-1">
+                <h2 className="text-2xl font-display font-black text-accent mb-4 uppercase tracking-wider">
+                  The Eco-Hero Mission
+                </h2>
+                <div className="space-y-3 text-lg md:text-xl font-bold text-foreground leading-relaxed">
+                  <p>We switch off the lights when we leave the room, ✋</p>
+                  <p>We turn down the heat to stop the planet's doom, 🧥</p>
+                  <p>We unplug our chargers at the end of the day, ⚡</p>
+                  <p>We choose green energy every single way, ☀️</p>
+                  <p className="text-2xl md:text-3xl text-primary mt-6 uppercase">
+                    Together we heroes keep waste away! 💪🌍
+                  </p>
+                </div>
+                <div className="absolute -top-8 -right-8 w-24 h-24 rounded-full border-4 border-foreground comic-shadow bg-white overflow-hidden animate-wiggle">
+                  <img
+                    src={`${import.meta.env.BASE_URL}eco-heroes-export/images/niseeap-logo.jpg`}
+                    alt="NI Schools Energy Efficiency Awareness Programme"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
-            <p className="text-xl md:text-3xl font-black uppercase tracking-wide mb-3 drop-shadow-[2px_2px_0_rgba(0,0,0,0.15)]">
-              <span className="text-secondary">🏆 5x Eco-Refurbished Laptops <span className="whitespace-nowrap">to Be Won</span></span>
-              <span className="text-foreground/30 mx-2">·</span>
-              <span className="text-primary whitespace-nowrap">ECO-FLAGS</span>
-              <span className="text-foreground/30 mx-2">·</span>
-              <span className="text-accent whitespace-nowrap">Free Entry</span>
-            </p>
+
             <div className="mb-5 bg-foreground text-background rounded-2xl px-4 md:px-6 py-4 block w-full max-w-sm mx-auto border-4 border-foreground comic-shadow">
               <p className="text-xs md:text-base font-bold tracking-wide uppercase text-background/70 mb-1 text-balance">
                 🎖️ Your Mission, If You Choose To Accept It...
@@ -54,28 +65,20 @@ export function HeroSection() {
           </div>
 
           <div className="relative mt-8 mb-10 animate-in zoom-in-95 duration-1000 delay-300">
-            <div className="absolute -inset-2 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl opacity-50 blur-lg"></div>
-            <div className="relative bg-white border-4 border-foreground rounded-3xl p-5 md:p-8 comic-shadow transform rotate-1">
-              <h2 className="text-2xl font-display font-black text-accent mb-4 uppercase tracking-wider">
-                The Eco-Hero Mission
-              </h2>
-              <div className="space-y-3 text-lg md:text-xl font-bold text-foreground leading-relaxed">
-                <p>We switch off the lights when we leave the room, ✋</p>
-                <p>We turn down the heat to stop the planet's doom, 🧥</p>
-                <p>We unplug our chargers at the end of the day, ⚡</p>
-                <p>We choose green energy every single way, ☀️</p>
-                <p className="text-2xl md:text-3xl text-primary mt-6 uppercase">
-                  Together we heroes keep waste away! 💪🌍
-                </p>
-              </div>
-              <div className="absolute -top-8 -right-8 w-24 h-24 rounded-full border-4 border-foreground comic-shadow bg-white overflow-hidden animate-wiggle">
-                <img
-                  src={`${import.meta.env.BASE_URL}eco-heroes-export/images/niseeap-logo.jpg`}
-                  alt="NI Schools Energy Efficiency Awareness Programme"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            <div className="flex justify-center gap-1 mb-4">
+              <span className="text-5xl drop-shadow-lg" role="img" aria-label="5 Eco-Refurbished Laptops to be won">💻</span>
+              <span className="text-5xl drop-shadow-lg">💻</span>
+              <span className="text-5xl drop-shadow-lg">💻</span>
+              <span className="text-5xl drop-shadow-lg">💻</span>
+              <span className="text-5xl drop-shadow-lg">💻</span>
             </div>
+            <p className="text-xl md:text-3xl font-black uppercase tracking-wide mb-3 drop-shadow-[2px_2px_0_rgba(0,0,0,0.15)]">
+              <span className="text-secondary">🏆 5x Eco-Refurbished Laptops <span className="whitespace-nowrap">to Be Won</span></span>
+              <span className="text-foreground/30 mx-2">·</span>
+              <span className="text-primary whitespace-nowrap">ECO-FLAGS</span>
+              <span className="text-foreground/30 mx-2">·</span>
+              <span className="text-accent whitespace-nowrap">Free Entry</span>
+            </p>
           </div>
           
           <div className="mt-8 animate-in fade-in duration-1000 delay-500">
