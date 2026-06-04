@@ -73,6 +73,7 @@ type Role = "school" | "teacher" | "pupil";
 export function MissionBuilderSection() {
   const [step, setStep] = useState<Step>("eco-school");
   const [ageBand, setAgeBand] = useState<string | null>("8-11");
+  const [activated, setActivated] = useState(false);
 
   // Pick up age pre-selected from the hero section tiles
   useEffect(() => {
@@ -82,6 +83,7 @@ export function MissionBuilderSection() {
       setAgeBand(pre);
       setAction(ACTIONS_BY_AGE[pre][0]);
       setStep("eco-school");
+      setActivated(true);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -232,8 +234,9 @@ export function MissionBuilderSection() {
   }
 
   function reset() {
-    setStep("age-band");
-    setAgeBand(null);
+    setActivated(false);
+    setStep("eco-school");
+    setAgeBand("8-11");
     setIsEcoSchool(null);
     setHasEnergyFlag(null);
     setSubmitted(false);
@@ -248,6 +251,17 @@ export function MissionBuilderSection() {
     setTeacherName("");
     setClassName("");
     setPupilFirstName("");
+  }
+
+  // ── Not yet activated — wait for hero tile click ─────────────────────────
+  if (!activated) {
+    return (
+      <section id="mission" className="py-6 bg-white">
+        <div className="text-center text-foreground/40 font-bold text-base py-4">
+          👆 Tap your age group above to start the Mission Builder
+        </div>
+      </section>
+    );
   }
 
   // ── Step 1: Are you already an Eco-School? ───────────────────────────────
