@@ -254,7 +254,6 @@ export function MissionBuilderSection() {
   if (step === "age-band") {
     return (
       <SectionShell>
-        <Heading />
         <div className="max-w-3xl mx-auto text-center">
           <div className="bg-white border-4 border-foreground rounded-2xl p-6 comic-shadow">
             <div className="text-5xl mb-3">🎒</div>
@@ -287,7 +286,6 @@ export function MissionBuilderSection() {
   if (step === "eco-school") {
     return (
       <SectionShell>
-        <Heading />
         <div className="max-w-2xl mx-auto text-center">
           <AgeBadge ageBand={ageBand} />
           <div className="bg-white border-4 border-foreground rounded-2xl p-10 comic-shadow">
@@ -319,7 +317,6 @@ export function MissionBuilderSection() {
 
     return (
       <SectionShell>
-        <Heading />
         <div className="max-w-2xl mx-auto text-center">
           <AgeBadge ageBand={ageBand} />
           <div className="bg-white border-4 border-foreground rounded-2xl p-10 comic-shadow">
@@ -366,7 +363,6 @@ export function MissionBuilderSection() {
   if (step === "next-flag") {
     return (
       <SectionShell>
-        <Heading />
         <div className="max-w-4xl mx-auto">
           <AgeBadge ageBand={ageBand} />
           <div className="text-center mb-8">
@@ -408,7 +404,6 @@ export function MissionBuilderSection() {
   // ── Step 4: Mission Builder ──────────────────────────────────────────────
   return (
     <SectionShell>
-      <Heading />
       <AgeBadge ageBand={ageBand} />
 
       {!submitted && (
@@ -668,18 +663,6 @@ function SectionShell({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Heading() {
-  return (
-    <div className="text-center mb-10">
-      <h2 className="text-5xl font-black font-display text-primary drop-shadow-[3px_3px_0_hsl(var(--foreground))] mb-3">
-        📝 OUR MISSION STATEMENT COMPETITION
-      </h2>
-      <p className="text-xl font-bold text-foreground/70">
-        Tell us about your school — we'll point you in the right direction!
-      </p>
-    </div>
-  );
-}
 
 function ChoiceBtn({ label, onClick, primary }: { label: string; onClick: () => void; primary?: boolean }) {
   return (
