@@ -79,10 +79,19 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* 5. Poem box */}
+          {/* 5. Poem box + Eco-Heroes blurb */}
           <div className="relative mt-10 animate-in zoom-in-95 duration-1000">
             <div className="absolute -inset-2 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl opacity-50 blur-lg"></div>
             <div className="relative bg-white border-4 border-foreground rounded-3xl p-5 md:p-8 comic-shadow transform rotate-1">
+              <h1 className="text-4xl md:text-6xl font-black text-primary drop-shadow-[0_3px_0_hsl(var(--foreground))] mb-1">
+                Our School<br /><span className="text-secondary">Eco-Heroes</span>
+              </h1>
+              <p className="text-base font-bold text-foreground/60 mb-1">
+                Led by <span className="text-primary font-black">Max</span> — and the Eco-Heroes Committee
+              </p>
+              <p className="text-lg md:text-xl font-bold text-foreground/80 italic mb-5">
+                Bring Down Energy!
+              </p>
               <h2 className="text-2xl font-display font-black text-accent mb-4 uppercase tracking-wider">
                 The Eco-Hero Mission
               </h2>
