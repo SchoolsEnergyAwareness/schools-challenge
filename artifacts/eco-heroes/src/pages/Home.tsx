@@ -24,14 +24,14 @@ export default function Home() {
       <div id="home" className="bg-white">
         <HeroSection />
       </div>
+      <div id="mission">
+        <MissionBuilderSection />
+      </div>
       <div id="heroes">
         <RosterSection />
       </div>
       <div id="why">
         <WhyEnterSection />
-      </div>
-      <div id="mission">
-        <MissionBuilderSection />
       </div>
       <div id="calculator">
         <SavingsCalculatorSection />
