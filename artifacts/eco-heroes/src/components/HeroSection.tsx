@@ -13,7 +13,7 @@ export function HeroSection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
 
-          {/* ── Dark "Your Mission" card ── */}
+          {/* 1. Dark "Your Mission" card */}
           <div className="mb-5 bg-foreground text-background rounded-2xl px-4 md:px-6 py-4 block w-full max-w-sm mx-auto border-4 border-foreground comic-shadow animate-in slide-in-from-bottom-8 duration-700">
             <p className="text-xs md:text-base font-bold tracking-wide uppercase text-background/70 mb-1 text-balance">
               🎖️ Your Mission, If You Choose To Accept It...
@@ -26,21 +26,8 @@ export function HeroSection() {
             </p>
           </div>
 
-          {/* ── H1 + subtitles ── */}
-          <div className="mb-6 animate-in slide-in-from-bottom-8 duration-700 delay-100">
-            <h1 className="text-5xl md:text-7xl font-black text-primary drop-shadow-[0_4px_0_hsl(var(--foreground))]">
-              Our School<br /><span className="text-secondary">Eco-Heroes</span>
-            </h1>
-            <p className="mt-3 text-lg font-bold text-foreground/60">
-              Led by <span className="text-primary font-black">Max</span> — and the Eco-Heroes Committee
-            </p>
-            <p className="mt-4 text-xl md:text-2xl font-bold text-foreground/80 italic">
-              Bring Down Energy!
-            </p>
-          </div>
-
-          {/* ── Mission Statement Competition text ── */}
-          <div className="mt-8 animate-in fade-in duration-700">
+          {/* 2. Mission Statement Competition text */}
+          <div className="mt-6 mb-2 animate-in fade-in duration-700">
             <h2 className="text-3xl md:text-5xl font-black font-display text-primary uppercase tracking-wide drop-shadow-[2px_2px_0_hsl(var(--foreground))]">
               Our Mission Statement<br />Competition
             </h2>
@@ -49,8 +36,8 @@ export function HeroSection() {
             </p>
           </div>
 
-          {/* ── Age group tiles ── */}
-          <div className="mt-8 mb-4 animate-in fade-in duration-700">
+          {/* 3. Age group tiles */}
+          <div className="mt-8 animate-in fade-in duration-700">
             <p className="text-2xl md:text-3xl font-black uppercase tracking-wide text-foreground mb-4">
               🎯 What age group are you?
             </p>
@@ -78,22 +65,21 @@ export function HeroSection() {
             <p className="mt-3 text-sm font-bold text-foreground/50">Tap your age group to jump straight to the Mission Builder ↓</p>
           </div>
 
-          {/* ── Flashing image: winning heroes + WE'RE BACK ── */}
-          <div className="mt-10 animate-in fade-in duration-1000 delay-500">
-            <img
-              src={`${import.meta.env.BASE_URL}eco-heroes-export/images/winning-heroes.png`}
-              alt="The Eco-Heroes Squad"
-              className="w-full max-w-xl mx-auto rounded-2xl border-4 border-foreground comic-shadow object-contain"
-            />
-            <div className="text-center mt-6">
-              <p className="text-6xl md:text-8xl font-black font-display text-accent drop-shadow-[4px_4px_0_hsl(var(--foreground))] animate-bounce">
-                WE'RE BACK!!
-              </p>
-            </div>
+          {/* 4. Our School Eco-Heroes blurb */}
+          <div className="mt-10 animate-in slide-in-from-bottom-8 duration-700">
+            <h1 className="text-5xl md:text-7xl font-black text-primary drop-shadow-[0_4px_0_hsl(var(--foreground))]">
+              Our School<br /><span className="text-secondary">Eco-Heroes</span>
+            </h1>
+            <p className="mt-3 text-lg font-bold text-foreground/60">
+              Led by <span className="text-primary font-black">Max</span> — and the Eco-Heroes Committee
+            </p>
+            <p className="mt-4 text-xl md:text-2xl font-bold text-foreground/80 italic">
+              Bring Down Energy!
+            </p>
           </div>
 
-          {/* ── Poem box — kept with Eco-Heroes ── */}
-          <div className="relative mt-10 animate-in zoom-in-95 duration-1000">
+          {/* 5. Poem box */}
+          <div className="relative mt-8 animate-in zoom-in-95 duration-1000">
             <div className="absolute -inset-2 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl opacity-50 blur-lg"></div>
             <div className="relative bg-white border-4 border-foreground rounded-3xl p-5 md:p-8 comic-shadow transform rotate-1">
               <h2 className="text-2xl font-display font-black text-accent mb-4 uppercase tracking-wider">
@@ -115,6 +101,20 @@ export function HeroSection() {
                   className="w-full h-full object-cover"
                 />
               </div>
+            </div>
+          </div>
+
+          {/* 6. Winning heroes image + WE'RE BACK */}
+          <div className="mt-10 animate-in fade-in duration-1000">
+            <img
+              src={`${import.meta.env.BASE_URL}eco-heroes-export/images/winning-heroes.png`}
+              alt="The Eco-Heroes Squad"
+              className="w-full max-w-xl mx-auto rounded-2xl border-4 border-foreground comic-shadow object-contain"
+            />
+            <div className="text-center mt-6">
+              <p className="text-6xl md:text-8xl font-black font-display text-accent drop-shadow-[4px_4px_0_hsl(var(--foreground))] animate-bounce">
+                WE'RE BACK!!
+              </p>
             </div>
           </div>
 
