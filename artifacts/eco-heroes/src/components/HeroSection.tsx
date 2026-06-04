@@ -14,20 +14,8 @@ export function HeroSection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6 animate-in slide-in-from-bottom-8 duration-700">
-            <div className="flex justify-center gap-1 mb-4">
-              <span className="text-5xl drop-shadow-lg" role="img" aria-label="5 Eco-Refurbished Laptops to be won">💻</span>
-              <span className="text-5xl drop-shadow-lg">💻</span>
-              <span className="text-5xl drop-shadow-lg">💻</span>
-              <span className="text-5xl drop-shadow-lg">💻</span>
-              <span className="text-5xl drop-shadow-lg">💻</span>
-            </div>
-            <p className="text-xl md:text-3xl font-black uppercase tracking-wide mb-3 drop-shadow-[2px_2px_0_rgba(0,0,0,0.15)]">
-              <span className="text-secondary">🏆 5x Eco-Refurbished Laptops <span className="whitespace-nowrap">to Be Won</span></span>
-              <span className="text-foreground/30 mx-2">·</span>
-              <span className="text-primary whitespace-nowrap">ECO-FLAGS</span>
-              <span className="text-foreground/30 mx-2">·</span>
-              <span className="text-accent whitespace-nowrap">Free Entry</span>
-            </p>
+
+            {/* Dark "Your Mission" briefing card — first */}
             <div className="mb-5 bg-foreground text-background rounded-2xl px-4 md:px-6 py-4 block w-full max-w-sm mx-auto border-4 border-foreground comic-shadow">
               <p className="text-xs md:text-base font-bold tracking-wide uppercase text-background/70 mb-1 text-balance">
                 🎖️ Your Mission, If You Choose To Accept It...
@@ -39,6 +27,37 @@ export function HeroSection() {
                 ⚠️ This message will self-destruct<br /><span className="whitespace-nowrap">by Thurs 16 June ⚠️</span>
               </p>
             </div>
+
+            {/* Age group tiles — second */}
+            <div className="mb-6">
+              <p className="text-2xl md:text-3xl font-black uppercase tracking-wide text-foreground mb-4">
+                🎯 What age group are you?
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl mx-auto">
+                {[
+                  { id: "5-7",           emoji: "⭐", label: "Ages 5–7",      sub: "Foundation & KS1", color: "bg-yellow-100 border-yellow-400 hover:bg-yellow-200" },
+                  { id: "8-11",          emoji: "🚀", label: "Ages 8–11",     sub: "Key Stage 2",      color: "bg-green-100 border-green-500 hover:bg-green-200" },
+                  { id: "12-14",         emoji: "🔬", label: "Ages 12–14",    sub: "Key Stage 3",      color: "bg-blue-100 border-blue-500 hover:bg-blue-200" },
+                  { id: "all-abilities", emoji: "♿", label: "All Abilities", sub: "All learners",     color: "bg-purple-100 border-purple-400 hover:bg-purple-200" },
+                ].map(({ id, emoji, label, sub, color }) => (
+                  <button
+                    key={id}
+                    onClick={() => {
+                      sessionStorage.setItem("preselectedAge", id);
+                      document.getElementById("mission")?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                    className={`${color} border-4 rounded-2xl p-4 comic-shadow text-center transition-transform hover:scale-105 active:scale-95 cursor-pointer`}
+                  >
+                    <div className="text-4xl mb-1">{emoji}</div>
+                    <div className="font-black text-foreground text-base uppercase leading-tight">{label}</div>
+                    <div className="text-xs font-bold text-foreground/60 mt-1">{sub}</div>
+                  </button>
+                ))}
+              </div>
+              <p className="mt-3 text-sm font-bold text-foreground/50">Tap your age group to jump straight to the Mission Builder ↓</p>
+            </div>
+
+            {/* H1 + subtitles */}
             <h1 className="text-5xl md:text-7xl font-black text-primary drop-shadow-[0_4px_0_hsl(var(--foreground))]">
               Our School<br /><span className="text-secondary">Eco-Heroes</span>
             </h1>
@@ -51,8 +70,27 @@ export function HeroSection() {
             <p className="mt-3 text-lg md:text-xl font-black text-foreground uppercase tracking-wide">
               Design a Mission Statement for <span className="text-primary">Your School</span> <span className="text-foreground/50 normal-case">(below)</span>
             </p>
+
+            {/* Laptops + prize text — moved below title */}
+            <div className="mt-5">
+              <div className="flex justify-center gap-1 mb-4">
+                <span className="text-5xl drop-shadow-lg" role="img" aria-label="5 Eco-Refurbished Laptops to be won">💻</span>
+                <span className="text-5xl drop-shadow-lg">💻</span>
+                <span className="text-5xl drop-shadow-lg">💻</span>
+                <span className="text-5xl drop-shadow-lg">💻</span>
+                <span className="text-5xl drop-shadow-lg">💻</span>
+              </div>
+              <p className="text-xl md:text-3xl font-black uppercase tracking-wide mb-3 drop-shadow-[2px_2px_0_rgba(0,0,0,0.15)]">
+                <span className="text-secondary">🏆 5x Eco-Refurbished Laptops <span className="whitespace-nowrap">to Be Won</span></span>
+                <span className="text-foreground/30 mx-2">·</span>
+                <span className="text-primary whitespace-nowrap">ECO-FLAGS</span>
+                <span className="text-foreground/30 mx-2">·</span>
+                <span className="text-accent whitespace-nowrap">Free Entry</span>
+              </p>
+            </div>
           </div>
 
+          {/* Poem box */}
           <div className="relative mt-8 mb-10 animate-in zoom-in-95 duration-1000 delay-300">
             <div className="absolute -inset-2 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl opacity-50 blur-lg"></div>
             <div className="relative bg-white border-4 border-foreground rounded-3xl p-5 md:p-8 comic-shadow transform rotate-1">
@@ -78,34 +116,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="mt-8 mb-6 animate-in fade-in duration-700 delay-300">
-            <p className="text-2xl md:text-3xl font-black uppercase tracking-wide text-foreground mb-4">
-              🎯 What age group are you?
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl mx-auto">
-              {[
-                { id: "5-7",           emoji: "⭐", label: "Ages 5–7",      sub: "Foundation & KS1", color: "bg-yellow-100 border-yellow-400 hover:bg-yellow-200" },
-                { id: "8-11",          emoji: "🚀", label: "Ages 8–11",     sub: "Key Stage 2",      color: "bg-green-100 border-green-500 hover:bg-green-200" },
-                { id: "12-14",         emoji: "🔬", label: "Ages 12–14",    sub: "Key Stage 3",      color: "bg-blue-100 border-blue-500 hover:bg-blue-200" },
-                { id: "all-abilities", emoji: "♿", label: "All Abilities", sub: "All learners",     color: "bg-purple-100 border-purple-400 hover:bg-purple-200" },
-              ].map(({ id, emoji, label, sub, color }) => (
-                <button
-                  key={id}
-                  onClick={() => {
-                    sessionStorage.setItem("preselectedAge", id);
-                    document.getElementById("mission")?.scrollIntoView({ behavior: "smooth" });
-                  }}
-                  className={`${color} border-4 rounded-2xl p-4 comic-shadow text-center transition-transform hover:scale-105 active:scale-95 cursor-pointer`}
-                >
-                  <div className="text-4xl mb-1">{emoji}</div>
-                  <div className="font-black text-foreground text-base uppercase leading-tight">{label}</div>
-                  <div className="text-xs font-bold text-foreground/60 mt-1">{sub}</div>
-                </button>
-              ))}
-            </div>
-            <p className="mt-3 text-sm font-bold text-foreground/50">Tap your age group to jump straight to the Mission Builder ↓</p>
-          </div>
-
+          {/* Winning heroes image */}
           <div className="mt-8 animate-in fade-in duration-1000 delay-500">
             <img 
               src={`${import.meta.env.BASE_URL}eco-heroes-export/images/winning-heroes.png`}
