@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Confetti } from "@/components/Confetti";
 import { NiheBadge } from "@/components/NiheBadge";
 
@@ -73,6 +73,18 @@ type Role = "school" | "teacher" | "pupil";
 export function MissionBuilderSection() {
   const [step, setStep] = useState<Step>("age-band");
   const [ageBand, setAgeBand] = useState<string | null>(null);
+
+  // Pick up age pre-selected from the hero section tiles
+  useEffect(() => {
+    const pre = sessionStorage.getItem("preselectedAge");
+    if (pre && ACTIONS_BY_AGE[pre]) {
+      sessionStorage.removeItem("preselectedAge");
+      setAgeBand(pre);
+      setAction(ACTIONS_BY_AGE[pre][0]);
+      setStep("eco-school");
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const [isEcoSchool, setIsEcoSchool] = useState<boolean | null>(null);
   const [hasEnergyFlag, setHasEnergyFlag] = useState<boolean | null>(null);
   const [missionMode, setMissionMode] = useState<MissionMode>("builder");

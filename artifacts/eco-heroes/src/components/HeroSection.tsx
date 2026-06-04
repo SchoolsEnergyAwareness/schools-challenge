@@ -81,6 +81,34 @@ export function HeroSection() {
             </p>
           </div>
           
+          <div className="mt-8 mb-6 animate-in fade-in duration-700 delay-300">
+            <p className="text-2xl md:text-3xl font-black uppercase tracking-wide text-foreground mb-4">
+              🎯 What age group are you?
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl mx-auto">
+              {[
+                { id: "5-7",           emoji: "⭐", label: "Ages 5–7",      sub: "Foundation & KS1", color: "bg-yellow-100 border-yellow-400 hover:bg-yellow-200" },
+                { id: "8-11",          emoji: "🚀", label: "Ages 8–11",     sub: "Key Stage 2",      color: "bg-green-100 border-green-500 hover:bg-green-200" },
+                { id: "12-14",         emoji: "🔬", label: "Ages 12–14",    sub: "Key Stage 3",      color: "bg-blue-100 border-blue-500 hover:bg-blue-200" },
+                { id: "all-abilities", emoji: "♿", label: "All Abilities", sub: "All learners",     color: "bg-purple-100 border-purple-400 hover:bg-purple-200" },
+              ].map(({ id, emoji, label, sub, color }) => (
+                <button
+                  key={id}
+                  onClick={() => {
+                    sessionStorage.setItem("preselectedAge", id);
+                    document.getElementById("mission")?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className={`${color} border-4 rounded-2xl p-4 comic-shadow text-center transition-transform hover:scale-105 active:scale-95 cursor-pointer`}
+                >
+                  <div className="text-4xl mb-1">{emoji}</div>
+                  <div className="font-black text-foreground text-base uppercase leading-tight">{label}</div>
+                  <div className="text-xs font-bold text-foreground/60 mt-1">{sub}</div>
+                </button>
+              ))}
+            </div>
+            <p className="mt-3 text-sm font-bold text-foreground/50">Tap your age group to jump straight to the Mission Builder ↓</p>
+          </div>
+
           <div className="mt-8 animate-in fade-in duration-1000 delay-500">
             <img 
               src={`${import.meta.env.BASE_URL}eco-heroes-export/images/winning-heroes.png`}
