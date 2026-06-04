@@ -26,18 +26,7 @@ export function HeroSection() {
             </p>
           </div>
 
-          {/* 2. Mission Statement Competition — pencil image + title once */}
-          <div className="mt-6 mb-2 animate-in fade-in duration-700">
-            <div className="text-7xl md:text-8xl mb-2" role="img" aria-label="pencil and paper">📝</div>
-            <h2 className="text-3xl md:text-5xl font-black font-display text-primary uppercase tracking-wide drop-shadow-[2px_2px_0_hsl(var(--foreground))]">
-              Our Mission Statement<br />Competition
-            </h2>
-            <p className="mt-3 text-lg md:text-xl font-bold text-foreground/70 italic">
-              Tell us about your school — we'll point you in the right direction!
-            </p>
-          </div>
-
-          {/* 3. Age group tiles */}
+          {/* 2. Age group tiles */}
           <div className="mt-8 animate-in fade-in duration-700">
             <p className="text-2xl md:text-3xl font-black uppercase tracking-wide text-foreground mb-4">
               🎯 What age group are you?
