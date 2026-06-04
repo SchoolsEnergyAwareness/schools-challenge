@@ -71,8 +71,8 @@ type MissionMode = "builder" | "freetext";
 type Role = "school" | "teacher" | "pupil";
 
 export function MissionBuilderSection() {
-  const [step, setStep] = useState<Step>("age-band");
-  const [ageBand, setAgeBand] = useState<string | null>(null);
+  const [step, setStep] = useState<Step>("eco-school");
+  const [ageBand, setAgeBand] = useState<string | null>("8-11");
 
   // Pick up age pre-selected from the hero section tiles
   useEffect(() => {
@@ -248,38 +248,6 @@ export function MissionBuilderSection() {
     setTeacherName("");
     setClassName("");
     setPupilFirstName("");
-  }
-
-  // ── Step 0: Age Band ─────────────────────────────────────────────────────
-  if (step === "age-band") {
-    return (
-      <SectionShell>
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="bg-white border-4 border-foreground rounded-2xl p-6 comic-shadow">
-            <div className="text-5xl mb-3">🎒</div>
-            <h3 className="text-3xl font-black font-display text-foreground mb-2">
-              What age group are you?
-            </h3>
-            <p className="text-foreground/60 font-medium mb-6">
-              We'll give you challenges that are just right for your class.
-            </p>
-            <div className="grid grid-cols-2 gap-3">
-              {AGE_BANDS.map((b) => (
-                <button
-                  key={b.id}
-                  onClick={() => handleAgeBand(b.id)}
-                  className={`${b.color} border-4 rounded-2xl p-4 comic-shadow hover:scale-105 transition-transform text-center`}
-                >
-                  <div className="text-4xl mb-2">{b.emoji}</div>
-                  <div className="font-black text-xl text-foreground mb-1">{b.label}</div>
-                  <div className="text-xs font-bold text-foreground/60">{b.desc}</div>
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </SectionShell>
-    );
   }
 
   // ── Step 1: Are you already an Eco-School? ───────────────────────────────
