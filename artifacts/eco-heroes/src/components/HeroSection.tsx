@@ -26,10 +26,20 @@ export function HeroSection() {
             </p>
           </div>
 
-          {/* 2. Age group tiles */}
+          {/* 2. Our Mission Statement Competition + subtitle */}
+          <div className="mt-6 mb-2 text-center animate-in fade-in duration-700">
+            <h2 className="text-4xl md:text-5xl font-black font-display text-primary drop-shadow-[3px_3px_0_hsl(var(--foreground))] mb-3">
+              📝 OUR MISSION STATEMENT COMPETITION
+            </h2>
+            <p className="text-lg md:text-xl font-bold text-foreground/70">
+              Tell us about your school — we'll point you in the right direction!
+            </p>
+          </div>
+
+          {/* 3. Age tiles */}
           <div className="mt-8 animate-in fade-in duration-700">
             <p className="text-2xl md:text-3xl font-black uppercase tracking-wide text-foreground mb-4">
-              🎯 What age group are you?
+              🎯 What Age Group Are You?
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl mx-auto">
               {[
@@ -55,7 +65,7 @@ export function HeroSection() {
             <p className="mt-3 text-sm font-bold text-foreground/50">Tap your age group to jump straight to the Mission Builder ↓</p>
           </div>
 
-          {/* 3. Winning heroes image + WE'RE BACK */}
+          {/* 4. Winning-heroes image + WE'RE BACK!! */}
           <div className="mt-10 animate-in fade-in duration-1000">
             <img
               src={`${import.meta.env.BASE_URL}eco-heroes-export/images/winning-heroes.png`}
@@ -69,7 +79,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* 4. Poem box + Eco-Heroes blurb */}
+          {/* 5. Poem + Eco-Heroes blurb */}
           <div className="relative mt-10 animate-in zoom-in-95 duration-1000">
             <div className="absolute -inset-2 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl opacity-50 blur-lg"></div>
             <div className="relative bg-white border-4 border-foreground rounded-3xl p-5 md:p-8 comic-shadow transform rotate-1">
@@ -102,16 +112,6 @@ export function HeroSection() {
                 />
               </div>
             </div>
-          </div>
-
-          {/* 5. Mission Statement Competition heading — leads straight into Mission Builder below */}
-          <div className="mt-12 mb-2 text-center animate-in fade-in duration-700">
-            <h2 className="text-4xl md:text-5xl font-black font-display text-primary drop-shadow-[3px_3px_0_hsl(var(--foreground))] mb-3">
-              📝 OUR MISSION STATEMENT COMPETITION
-            </h2>
-            <p className="text-lg md:text-xl font-bold text-foreground/70">
-              Tell us about your school — we'll point you in the right direction!
-            </p>
           </div>
 
         </div>
