@@ -32,7 +32,7 @@ export function HeroSection() {
               📝 OUR MISSION STATEMENT COMPETITION
             </h2>
             <p className="text-lg md:text-xl font-bold text-foreground/70">
-              Tell us about your school — we'll point you in the right direction!
+              Choose your ages below and complete a simple Mission for your school. There's samples available to help.
             </p>
           </div>
 
